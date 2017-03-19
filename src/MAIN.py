@@ -118,7 +118,7 @@ def ourOwnDigits():
     # Use saved weights
     LW_from_txt()
 
-    # Draw the digit
+    # DRAWS THE DIGITS, DO NOT REMOVE
     import DrawNumber
 
     # Import the digit image
