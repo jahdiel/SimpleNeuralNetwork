@@ -5,12 +5,19 @@ import numpy
 
 import time
 import scipy.misc
+import os
+
+##### Global Variable ##########
+curfilePath = os.path.abspath(__file__)
+curDir = os.path.abspath(os.path.join(curfilePath, os.pardir))
+parentDir = os.path.abspath(os.path.join(curDir, os.pardir))
+
 
 ####### Train the Neural Network ########
 
 def trainNet(epochs, save=False):
     # Load the MNIST training data CSV file into a list
-    train_data_file = open("D:\NeuralNetworks\MNIST_Dataset\Training_Set\mnist_train.csv", 'r')
+    train_data_file = open(parentDir+"/mnist_sample/mnist_train_100.csv", 'r')
 
     # Epochs is the number of times the training data set is used for training
     for e in xrange(epochs):
@@ -68,7 +75,7 @@ def trainNet(epochs, save=False):
 
 def queryNet():
     # Load the MNIST test data CSV file into a list
-    test_data_file = open("D:\NeuralNetworks\MNIST_Dataset\Test_Set\mnist_test.csv", 'r')
+    test_data_file = open(parentDir+"/mnist_sample/mnist_test_10.csv", 'r')
 
     ########### Test the Neural Network ##########
 
