@@ -151,13 +151,8 @@ def LW_from_txt():
 
 if __name__ == '__main__':
 
-    from Softplus_BackProp import *
     from NeuralNetwork import *
     from BackPropNN import *
-    from BackProp_Momentum import *
-    from BackProp_Nguyen_Widrow import *
-    from BackProp_Batch import *
-    from ReLu_BackProp import *
 
     # Number of Layer Nodes
     INPUT_NODES = 784
